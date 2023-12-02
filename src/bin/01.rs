@@ -43,8 +43,6 @@ pub fn part_two(input: &str) -> Option<u32> {
 
     for line in lines {
         if let Some(first) = re.find(line).map(|c| c.as_str()) {
-            print!("First: {}", first);
-
             if let Ok(val) = first.parse::<u32>() {
                 calibration += val * 10;
             } else {
@@ -57,8 +55,6 @@ pub fn part_two(input: &str) -> Option<u32> {
             .find(line.chars().rev().collect::<String>().as_str())
             .map(|c| c.as_str().chars().rev().collect::<String>())
         {
-            println!("Last: {}", last);
-
             if let Ok(val) = last.as_str().parse::<u32>() {
                 calibration += val;
             } else {
