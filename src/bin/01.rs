@@ -63,7 +63,6 @@ pub fn part_two(input: &str) -> Option<u32> {
             }
         }
     }
-
     Some(calibration)
 }
 
